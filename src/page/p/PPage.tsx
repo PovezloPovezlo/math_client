@@ -1,9 +1,14 @@
 import React from 'react';
+import {Card, CardContent} from "@material-ui/core";
 
 const PPage: React.FC = (props) => {
     return (
         <div>
-            this is P page
+            <Card>
+                <CardContent>
+                    Скоро
+                </CardContent>
+            </Card>
         </div>
     );
 };

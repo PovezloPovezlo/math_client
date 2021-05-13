@@ -16,14 +16,16 @@ const InfoCard: React.FC<InfoCardProps> = (props) => {
         const author = module.author;
 
         cards.push(
-            <Grid item xs={12} sm={6} xl={3}>
+            <Grid item sm style={{width: 300}}>
                 <Card>
                     <CardHeader
                         avatar={
                             <Avatar onClick={() => window.open(author.link)} src={author.avatar}/>
                         }
                         title={module.author.name}
-                        subheader={"Автор функции " + module.name}
+                        subheader={
+                            <span>Автор функции <b>{module.name}</b></span>
+                        }
                     />
                     <CardContent>
                         <Button
