@@ -21,7 +21,7 @@ const Modules = {
     "DIV_NN_N": new ModuleInfo(Authors.Intrigger, "DIV_NN_N", nUrl + "328"),
     "MOD_NN_N": new ModuleInfo(Authors.Intrigger, "MOD_NN_N", nUrl + "353"),
     "GCF_NN_N": new ModuleInfo(Authors.KillReal, "GCF_NN_N", nUrl + "373"),
-    "LCM_NN_N": new ModuleInfo(Authors.unknown, "LCM_NN_N", nUrl + "400"),
+    "LCM_NN_N": new ModuleInfo(Authors.alexart878, "LCM_NN_N", nUrl + "400"),
     //endregion
 
     //region Z
@@ -38,19 +38,19 @@ const Modules = {
     //endregion
 
     //region q
-    "RED_Q_Q": new ModuleInfo(Authors.unknown, "RED_Q_Q", qUrl + "23"),
+    "RED_Q_Q": new ModuleInfo(Authors.BassinIlya, "RED_Q_Q", qUrl + "23"),
     "INT_Q_B": new ModuleInfo(Authors.WhoLeb, "INT_Q_B", qUrl + "35"),
     "TRANS_Z_Q": new ModuleInfo(Authors["nastasia-av"], "TRANS_Z_Q", qUrl + "52"),
     "TRANS_Q_Z": new ModuleInfo(Authors.DenisionSoft, "TRANS_Q_Z", qUrl + "69"),
-    "ADD_QQ_Q": new ModuleInfo(Authors.unknown, "ADD_QQ_Q", qUrl + "88"),
-    "SUB_QQ_Q": new ModuleInfo(Authors.unknown, "SUB_QQ_Q", qUrl + "102"),
+    "ADD_QQ_Q": new ModuleInfo(Authors.KillReal, "ADD_QQ_Q", qUrl + "88"),
+    "SUB_QQ_Q": new ModuleInfo(Authors.KillReal, "SUB_QQ_Q", qUrl + "102"),
     "MUL_QQ_Q": new ModuleInfo(Authors["nastasia-av"], "MUL_QQ_Q", qUrl + "116"),
     "DIV_QQ_Q": new ModuleInfo(Authors["nastasia-av"], "DIV_QQ_Q", qUrl + "135"),
     //endregion
 
     //region p
-    "ADD_PP_P": new ModuleInfo(Authors.unknown, "ADD_PP_P", pUrl + "24"),
-    "SUB_PP_P": new ModuleInfo(Authors.unknown, "SUB_PP_P", pUrl + "38"),
+    "ADD_PP_P": new ModuleInfo(Authors.alexart878, "ADD_PP_P", pUrl + "24"),
+    "SUB_PP_P": new ModuleInfo(Authors.alexart878, "SUB_PP_P", pUrl + "38"),
     "MUL_PQ_P": new ModuleInfo(Authors.DenisionSoft, "MUL_PQ_P", pUrl + "52"),
     "MUL_Pxk_P": new ModuleInfo(Authors.DenisionSoft, "MUL_Pxk_P", pUrl + "75"),
     "LED_P_Q": new ModuleInfo(Authors["nastasia-av"], "LED_P_Q", pUrl + "99"),
@@ -61,7 +61,7 @@ const Modules = {
     "MOD_PP_P": new ModuleInfo(Authors.unknown, "MOD_PP_P", pUrl + "169"),
     "GCF_PP_P": new ModuleInfo(Authors["nastasia-av"], "GCF_PP_P", pUrl + "183"),
     "DER_P_P": new ModuleInfo(Authors.WhoLeb, "DER_P_P", pUrl + "218"),
-    "NMR_P_P": new ModuleInfo(Authors.unknown, "NMR_P_P", pUrl + "249"),
+    "NMR_P_P": new ModuleInfo(Authors.WhoLeb, "NMR_P_P", pUrl + "249"),
     //endregion
 
 

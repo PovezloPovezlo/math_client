@@ -4,6 +4,9 @@ import MulPage from './MulPage';
 import SubPage from './SubPage';
 import DivPage from "./DivPage";
 import SumPage from './SumPage';
+import GcfPage from "./GcfPage";
+import LcmPage from "./LcmPage";
+import ModPage from "./ModPage";
 
 const NPage: React.FC = (props) => {
     // noinspection NonAsciiCharacters
@@ -12,6 +15,9 @@ const NPage: React.FC = (props) => {
         "Вычитание": <SubPage />,
         "Умножение": <MulPage />,
         "Деление": <DivPage />,
+        "Остаток": <ModPage />,
+        "НОД": <GcfPage />,
+        "НОК": <LcmPage />,
     };
 
     return (

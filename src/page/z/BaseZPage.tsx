@@ -7,13 +7,13 @@ import InfoCard from "../../component/InfoCard";
 import Author from "../../api/Author";
 import {ModuleInfo} from "../../api/ModuleInfo";
 
-interface BaseZPage {
+interface BaseZPageProps {
     apiMethod: string,
     modules: ModuleInfo[],
     validator?: (t: string) => boolean
 }
 
-const BaseZPage: React.FC<BaseZPage> = ({apiMethod, modules,  validator}) => {
+const BaseZPage: React.FC<BaseZPageProps> = ({apiMethod, modules,  validator}) => {
     if(!validator){
         validator = LongNumber.validate;
     }
@@ -35,7 +35,11 @@ const BaseZPage: React.FC<BaseZPage> = ({apiMethod, modules,  validator}) => {
         const val = event.target.value;
         if(validator && validator(val)){
             setNumber1(val);
-            update(val, number2);
+            if(number2 !== '') {
+                update(val, number2);
+            }
+        }else if(val === ''){
+            setNumber1(val);
         }
     };
 
@@ -44,7 +48,11 @@ const BaseZPage: React.FC<BaseZPage> = ({apiMethod, modules,  validator}) => {
         const val = event.target.value;
         if(validator && validator(val)){
             setNumber2(val);
-            update(number1, val);
+            if(number1 !== '') {
+                update(number1, val);
+            }
+        }else if(val === ''){
+            setNumber2(val);
         }
     };
 

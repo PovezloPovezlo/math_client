@@ -4,6 +4,7 @@ import MulPage from './MulPage';
 import SubPage from './SubPage';
 import SumPage from './SumPage';
 import DivPage from "./DivPage";
+import ModPage from "./ModPage";
 
 const ZPage: React.FC = (props) => {
     // noinspection NonAsciiCharacters
@@ -12,6 +13,7 @@ const ZPage: React.FC = (props) => {
         "Вычитание": <SubPage />,
         "Умножение": <MulPage />,
         "Деление": <DivPage />,
+        "Остаток": <ModPage />,
     };
 
     return (
