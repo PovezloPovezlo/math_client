@@ -137,7 +137,7 @@ function App() {
               <List>
                   <ListItem button key={"noliktop"} onClick={() => window.open("https://vk.com/noliktop")}>
                       <ListItemAvatar>
-                          <Avatar alt="NolikTop" src="https://sun9-70.userapi.com/s/v1/ig2/k6OI6EQVITbgXxnPC0KUO9N3kEpR1m8t0TPltLyZKodmNY23ZThrMbaOxeL9YuiUNMk8JZwcT0SkRiJkWwHr6d4h.jpg?size=50x0&quality=96&crop=332,1031,810,810&ava=1" />
+                          <Avatar alt="NolikTop" src="https://sun9-17.userapi.com/s/v1/ig2/P42zrCHVlv2sXBXOXXH8-yz43mSppQm7EXMS7d8QQc-v-rqLpQQ0fuE38GZENESJxhblih3co_7aOoFbJkMoWjxi.jpg?size=100x0&quality=96&crop=572,842,607,607&ava=1" />
                       </ListItemAvatar>
                       <ListItemText
                           primary={"Айдан Миннегараев"}
