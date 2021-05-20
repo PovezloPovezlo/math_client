@@ -20,7 +20,7 @@ const PPage: React.FC = (props) => {
         "Остаток": <ModPage />,
         //"НОД": <GcfPage />,
         "Производная": <DerPage />,
-        "Кратн в прост": <NmrPage />,
+        //"Кратн в прост": <NmrPage />,
     };
 
     return (
