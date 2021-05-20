@@ -56,7 +56,7 @@ const Modules = {
     "LED_P_Q": new ModuleInfo(Authors["nastasia-av"], "LED_P_Q", pUrl + "117"),
     "DEG_P_N": new ModuleInfo(Authors["nastasia-av"], "DEG_P_N", pUrl + "131"),
     "FAC_P_Q": new ModuleInfo(Authors["Arctic-beaver"], "FAC_P_Q", pUrl + "145"),
-    "MUL_PP_P": new ModuleInfo(Authors["Arctic-beaver"], "MUL_PP_P", pUrl + "187"),
+    "MUL_PP_P": new ModuleInfo(Authors.WhoLeb, "MUL_PP_P", pUrl + "187"),
     "DIV_PP_P": new ModuleInfo(Authors.WhoLeb, "DIV_PP_P", pUrl + "214"),
     "MOD_PP_P": new ModuleInfo(Authors.WhoLeb, "MOD_PP_P", pUrl + "251"),
     "GCF_PP_P": new ModuleInfo(Authors["nastasia-av"], "GCF_PP_P", pUrl + "289"),
