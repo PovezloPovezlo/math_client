@@ -18,7 +18,7 @@ const PPage: React.FC = (props) => {
         "Умножение": <MulPage />,
         "Деление": <DivPage />,
         "Остаток": <ModPage />,
-        //"НОД": <GcfPage />,
+        "НОД": <GcfPage />,
         "Производная": <DerPage />,
         //"Кратн в прост": <NmrPage />,
     };

@@ -4,6 +4,7 @@ export class API {
         return new Promise<object>((resolve, reject) => {
             let apiUrl: string;
             if (process.env.NODE_ENV === "development") {
+
                 apiUrl = "http://127.0.0.1:3041/";
             }else{
                 apiUrl = "/";
@@ -17,21 +18,31 @@ export class API {
                 data.push(encodeURIComponent(key) + "=" + encodeURIComponent(value));
             }
             url += '&' + data.join("&");
-
-            fetch(url, {
-                method: 'GET',
-            })
-                .then(response => response.json()
-                    .then(d => {
-                        if (d.error !== undefined) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.timeout = 1000;
+            xhr.onreadystatechange = () => {
+                if(xhr.readyState === XMLHttpRequest.DONE){
+                    const d = JSON.parse(xhr.responseText);
+                    if(d) {
+                        // @ts-ignore
+                        if(d.error) {
                             reject(d.error);
-                        } else {
-                            resolve(d)
+                        }else{
+                            resolve(d);
                         }
-                    })
-                    .catch(reject)
-                )
-                .catch(reject);
+                    }else{
+                        reject({code: 0, message: "Cant parse json"});
+                    }
+                }
+            }
+            xhr.onerror = () => {
+                reject({code: 0, message: "Xhr error"});
+            };
+            xhr.ontimeout = () => {
+                reject({code: 0, message: "Timeout"});
+            }
+            xhr.send(null);
         });
     }
 

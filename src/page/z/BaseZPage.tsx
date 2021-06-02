@@ -35,10 +35,10 @@ const BaseZPage: React.FC<BaseZPageProps> = ({apiMethod, modules,  validator}) =
         const val = event.target.value;
         if(validator && validator(val)){
             setNumber1(val);
-            if(number2 !== '') {
+            if(number2 !== '' && number2 !== '-') {
                 update(val, number2);
             }
-        }else if(val === ''){
+        }else if(val === '' || val === '-'){
             setNumber1(val);
         }
     };
@@ -48,10 +48,10 @@ const BaseZPage: React.FC<BaseZPageProps> = ({apiMethod, modules,  validator}) =
         const val = event.target.value;
         if(validator && validator(val)){
             setNumber2(val);
-            if(number1 !== '') {
+            if(number1 !== '' && number1 !== '-') {
                 update(number1, val);
             }
-        }else if(val === ''){
+        }else if(val === '' || val === '-'){
             setNumber2(val);
         }
     };

@@ -113,7 +113,7 @@ const BasePPage: React.FC<BasePPageProps> = ({apiMethod, modules}) => {
             if(Polynomial.validate(p1)) {
                 update();
             }
-        }else if(val === ''){
+        }else if(val === '' || val === '-'){
             p1[id] = val; // нельзя отсюда эту строку выносить
             __setP1(p1);
             redraw();

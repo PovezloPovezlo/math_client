@@ -33,8 +33,8 @@ const Modules = {
     "ADD_ZZ_Z": new ModuleInfo(Authors["Arctic-beaver"], "ADD_ZZ_Z", zUrl + "95"),
     "SUB_ZZ_Z": new ModuleInfo(Authors["Arctic-beaver"], "SUB_ZZ_Z", zUrl + "162"),
     "MUL_ZZ_Z": new ModuleInfo(Authors.WhoLeb, "MUL_ZZ_Z", zUrl + "177"),
-    "DIV_ZZ_Z": new ModuleInfo(Authors["Arctic-beaver"], "DIV_ZZ_Z", zUrl + "199"),
-    "MOD_ZZ_Z": new ModuleInfo(Authors.WhoLeb, "MOD_ZZ_Z", zUrl + "234"),
+    "DIV_ZZ_Z": new ModuleInfo(Authors.KillReal, "DIV_ZZ_Z", zUrl + "199"),
+    "MOD_ZZ_Z": new ModuleInfo(Authors.KillReal, "MOD_ZZ_Z", zUrl + "234"),
     //endregion
 
     //region q
@@ -57,7 +57,7 @@ const Modules = {
     "DEG_P_N": new ModuleInfo(Authors["nastasia-av"], "DEG_P_N", pUrl + "131"),
     "FAC_P_Q": new ModuleInfo(Authors["Arctic-beaver"], "FAC_P_Q", pUrl + "145"),
     "MUL_PP_P": new ModuleInfo(Authors.WhoLeb, "MUL_PP_P", pUrl + "187"),
-    "DIV_PP_P": new ModuleInfo(Authors.WhoLeb, "DIV_PP_P", pUrl + "214"),
+    "DIV_PP_P": new ModuleInfo(Authors.Intrigger, "DIV_PP_P", pUrl + "214"),
     "MOD_PP_P": new ModuleInfo(Authors.WhoLeb, "MOD_PP_P", pUrl + "251"),
     "GCF_PP_P": new ModuleInfo(Authors["nastasia-av"], "GCF_PP_P", pUrl + "289"),
     "DER_P_P": new ModuleInfo(Authors.WhoLeb, "DER_P_P", pUrl + "324"),
