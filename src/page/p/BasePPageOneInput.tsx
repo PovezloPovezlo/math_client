@@ -100,27 +100,44 @@ const BasePPageOneInput: React.FC<BasePPageProps> = ({apiMethod, modules}) => {
         }
     };
 
-    const [p1, __setP1] = useState(['1']);
-    const handleChangeP1 = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const [p1, __setP1] = useState([['1', '1']]);
+    const handleChangeP1Numerator = (event: React.ChangeEvent<HTMLInputElement>) => {
         const val = event.target.value;
         const id = parseInt(event.target.id.substr(3));
 
         if(validator(val)){
-            p1[id] = val; // так надо!
+            p1[id][0] = val; // так надо!
             __setP1(p1);
             redraw();
-            if(Polynomial.validate(p1)) {
+            if(Polynomial.validate(p1[0])) {
+                update();
+            }
+        }else if(val === '' || val === '-'){
+            p1[id][0] = val; // нельзя отсюда эту строку выносить
+            __setP1(p1);
+            redraw();
+        }
+    };
+    const handleChangeP1Denominator = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const val = event.target.value;
+        const id = parseInt(event.target.id.substr(3));
+
+        if(validator(val) && !val.includes('-')){
+            p1[id][1] = val; // так надо!
+            __setP1(p1);
+            redraw();
+            if(Polynomial.validate(p1[1])) {
                 update();
             }
         }else if(val === ''){
-            p1[id] = val; // нельзя отсюда эту строку выносить
+            p1[id][1] = val; // нельзя отсюда эту строку выносить
             __setP1(p1);
             redraw();
         }
     };
 
     const addP1Element = () => {
-        p1.push('1');
+        p1.push(['1', '1']);
         __setP1(p1);
         update();
         redraw();
@@ -141,10 +158,12 @@ const BasePPageOneInput: React.FC<BasePPageProps> = ({apiMethod, modules}) => {
 
         p1Inputs.push(
             <Grid item>
-                <TextField size="medium" style={inputStyles} id={"p1_"+_i} value={_val} onChange={handleChangeP1} type="text" variant="outlined" />
+                <TextField size="medium" style={inputStyles} id={"p1_"+_i} value={_val[0]} onChange={handleChangeP1Numerator} type="text" variant="outlined" />
                 {_i !== "0" &&
                 <span style={xStyles}>x<sup>{_i}</sup></span>
                 }
+                <hr />
+                <TextField size="medium" style={inputStyles} id={"p1d"+_i} value={_val[1]} onChange={handleChangeP1Denominator} type="text" variant="outlined" />
             </Grid>
         )
     }

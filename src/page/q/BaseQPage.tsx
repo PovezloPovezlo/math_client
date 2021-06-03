@@ -18,7 +18,7 @@ const BaseQPage: React.FC<BaseQPageProps> = ({apiMethod, modules}) => {
     let output = useRef<HTMLHeadingElement>(null);
 
     const update = (aNumerator: string, aDenominator: string, bNumerator: string, bDenominator: string) => {
-        if(aNumerator !== "" && aDenominator !== "" && bNumerator !== "" && bDenominator !== "") {
+        if(aNumerator !== "" && aNumerator !== "-" && aDenominator !== "" && bNumerator !== "" && bNumerator !== "-" && bDenominator !== "") {
             const a = aNumerator + "/" + aDenominator;
             const b = bNumerator + "/" + bDenominator;
             API.request(apiMethod, {a: a, b: b})
@@ -38,7 +38,7 @@ const BaseQPage: React.FC<BaseQPageProps> = ({apiMethod, modules}) => {
         if(validatorNumerator(val)){
             setNumber1Numerator(val);
             update(val, number1Denominator, number2Numerator, number2Denominator);
-        }else if(val === ''){
+        }else if(val === '' || val === '-'){
             setNumber1Numerator(val);
         }
     };
@@ -60,7 +60,7 @@ const BaseQPage: React.FC<BaseQPageProps> = ({apiMethod, modules}) => {
         if(validatorNumerator(val)){
             setNumber2Numerator(val);
             update(number1Numerator, number1Denominator, val, number2Denominator);
-        }else if(val === ''){
+        }else if(val === '' || val === '-'){
             setNumber2Numerator(val);
         }
     };

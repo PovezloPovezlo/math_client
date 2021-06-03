@@ -18,13 +18,13 @@ export default class Polynomial {
         return true;
     }
 
-    static toString(n: string[]): string{
+    static toString(n: string[][]): string{
         let r = "";
         for(const [i, el] of Object.entries(n)){
             if(parseInt(i) > 0) {
-                r += el + "*x^" + i;
+                r += el[0] + "/" + el[1] + "*x^" + i;
             }else{
-                r += el;
+                r += el[0] + "/" + el[1];
             }
             r += " ";
         }
